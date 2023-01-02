@@ -36,6 +36,7 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: -30px;
     
 }
 input{
@@ -44,8 +45,6 @@ padding: 20px 270px;
 border: none;
 font-size: 20px;
 border-radius: 10px;
-
-
 
 
 
@@ -76,36 +75,39 @@ button{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-   transform: translateY(10px);
+    transform: translateY(10px);
 
 }
 
 .todo-item{
 
     list-style: none;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     position: relative;
+    padding: 20px 250px;
+    border: none;
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 10px;
+
+
    
 }
 
 .todo-text{
 
-border: 1px solid rebeccapurple;
-padding: 20px 270px;
-border: none;
-background-color:  rebeccapurple;
-border-radius: 10px;
-font-size: 20px;
 
+font-size: 20px;
+font-weight: 700;
 
 }
 
 .material-icons{
 
 position: absolute;
-right: 30px;
-top: 0;
-bottom: 0;
+right: 5%;
+bottom: 70%;
+top: 20px;
 cursor: pointer;
 
 }
