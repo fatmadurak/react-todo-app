@@ -42,19 +42,7 @@ function TodoForm(props) {
     <button  className='todo-button'>
       Add todo
     </button>
-    <ul>
-        {  props.todos.map((todo)=>
-
-         <li >
-        <span>{todo.text}</span>
-         </li>
-
-        )
-      
-        }
-     
-       </ul>
-
+   
     </form>
  
  

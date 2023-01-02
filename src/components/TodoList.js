@@ -15,13 +15,13 @@ setTodos(newTodos);
 
 }
 
-// const deleteTodo=id=>{
+ const deleteTodo=id=>{
 
 
-// const deleteTodos=[...todos].filter(todo=>todo.id!==id);
-// setTodos(deleteTodos);
+ const deleteTodos=[...todos].filter(todo=>todo.id!==id);
+ setTodos(deleteTodos);
 
-// }
+ }
 
 
 
@@ -29,8 +29,9 @@ setTodos(newTodos);
     <>
 
    <h1>Bugün için ne planlıyorsun?</h1>
-   <TodoForm addTodo={addTodo} todos={todos}/>
- 
+   <TodoForm addTodo={addTodo}/>
+  <Todo  todos={todos} deleteTodo={deleteTodo} />
+    
 
 
 
