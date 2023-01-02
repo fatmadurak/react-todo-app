@@ -4,18 +4,13 @@ import React from 'react'
 
 const Todo = (props) => {
   return (
-   <div>
+   <div className='todo'>
      <ul>
     { props.todos.map((todo)=>
 
-     <li key={todo.id}>
-    <span>{todo.text}</span>
-    <div className='icons'>
-    
-         <i  onClick={() => props.deleteTodo(todo.id)}className="material-icons" >cancel</i>
-         
-     
-       </div>
+     <li  className='todo-item' key={todo.id}>
+    <span className='todo-text'>{todo.text} <i  onClick={() => props.deleteTodo(todo.id)}className="material-icons" >cancel</i></span>
+
      </li>
      
     )

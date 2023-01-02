@@ -29,9 +29,9 @@ function TodoForm(props) {
 
   return (
     <>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
     <input
-      placeholder='Add a todo'
+      placeholder='Bugünki Planını Ekle :'
       value={input}
       onChange={handleChange}
       name='text'
@@ -40,7 +40,7 @@ function TodoForm(props) {
     
     />
     <button  className='todo-button'>
-      Add todo
+      Ekle
     </button>
    
     </form>
