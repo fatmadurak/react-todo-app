@@ -7,12 +7,8 @@ function ContentFooter() {
 
 	const clearCompleted=()=>{
 
-      
-		const cloned_todos=[...todos];
-
-		const new_todos=cloned_todos.filter((todo)=>!todo.completed)
-   
-		setTodos(new_todos)
+  
+		setTodos((prev)=>prev.filter((todo)=>!todo.completed))
 
 	}
 
