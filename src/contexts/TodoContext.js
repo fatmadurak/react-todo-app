@@ -19,6 +19,20 @@ setTodos((prev)=>[...prev,{id:uuidv4(),completed:false,text}])
 
 }
 
+const removeTodo=(id)=>{
+
+  const cloned_todos=[...todos]
+  
+  const itemIndex=cloned_todos.findIndex((todo)=>todo.id===id)
+  
+  cloned_todos.splice(itemIndex,1)
+  
+  setTodos(cloned_todos)
+  
+  
+  
+  }
+
 const toggleTodo=(id)=>{
 
   const cloned_todos=[...todos];
@@ -40,6 +54,7 @@ todos,
 setTodos,
 addTodo,
 toggleTodo,
+removeTodo,
 
 }
 

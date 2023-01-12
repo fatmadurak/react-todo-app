@@ -3,7 +3,7 @@ import { useTodo } from '../../../contexts/TodoContext'
 
 function Item({todo}) {
 
-const {toggleTodo,setTodos}=useTodo();
+const {toggleTodo,removeTodo}=useTodo();
 
 const onChange=(id)=>{
 
@@ -12,6 +12,14 @@ toggleTodo(id)
 
 }
 
+const onDestroy=(id)=>{
+
+  removeTodo(id)
+
+}
+
+
+
 
 
   return (
@@ -19,7 +27,7 @@ toggleTodo(id)
     <div className="view">
         <input className="toggle" type="checkbox" checked={todo.completed} onChange={()=>onChange(todo.id)}/>
         <label>{todo.text}</label>
-        <button className="destroy"></button>
+        <button className="destroy" onClick={()=>onDestroy(todo.id)}></button>
     </div>
 </li>
   )
