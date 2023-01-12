@@ -1,11 +1,15 @@
 import React from 'react'
+import { useTodo } from '../contexts/TodoContext'
 
 function ContentFooter() {
+ 
+	const {todos}=useTodo()
+
   return (
     <footer className="footer">
 		<span className="todo-count">
-			<strong>2</strong>
-			items left
+			<strong>{todos.length }  </strong>
+			item{todos.length > 1 && "s"}  left
 		</span>
 
 		<ul className="filters">
