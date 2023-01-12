@@ -4,7 +4,7 @@ import {v4 as uuidv4} from "uuid"
 const TodoContext=createContext();
 
 export const TodoProvider=({children})=>{
-
+const[filter,setFilter]=useState("all");
 const[todos,setTodos]=useState([{
 
 id:1,
@@ -55,6 +55,8 @@ setTodos,
 addTodo,
 toggleTodo,
 removeTodo,
+filter,
+setFilter,
 
 }
 

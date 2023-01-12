@@ -3,7 +3,18 @@ import { useTodo } from '../contexts/TodoContext'
 
 function ContentFooter() {
  
-	const {todos}=useTodo()
+	const {todos,setTodos,filter,setFilter}=useTodo()
+
+	const clearCompleted=()=>{
+
+      
+		const cloned_todos=[...todos];
+
+		const new_todos=cloned_todos.filter((todo)=>!todo.completed)
+   
+		setTodos(new_todos)
+
+	}
 
   return (
     <footer className="footer">
@@ -14,17 +25,17 @@ function ContentFooter() {
 
 		<ul className="filters">
 			<li>
-				<a href="#/" className="selected">All</a>
+				<a href="#/" onClick={()=>setFilter("all")} className={filter==="all"?"selected":""}>All</a>
 			</li>
 			<li>
-				<a href="#/">Active</a>
+				<a href="#/" onClick={()=>setFilter("active")} className={filter==="active"?"selected":""}>Active</a>
 			</li>
 			<li>
-				<a href="#/">Completed</a>
+				<a href="#/"onClick={()=>setFilter("completed")} className={filter==="completed"?"selected":""}>Completed</a>
 			</li>
 		</ul>
 
-		<button className="clear-completed">
+		<button onClick={clearCompleted} className="clear-completed">
 			Clear completed
 		</button>
 	</footer>
