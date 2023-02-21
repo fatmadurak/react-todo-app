@@ -20,8 +20,6 @@ const onDestroy=(id)=>{
 
 
 
-
-
   return (
     <li key={todo.id} className={todo.completed?"completed":""}>
     <div className="view">
